@@ -1,9 +1,48 @@
+body {
+    background-color:rgb(255, 78, 78);
+}
+
 h1 {
-    color: grey;
+    color: white;
     font-size: 50px;
     font-family: Courier, monospace;
 }
 
 ul {
     list-style-type: none;
+    width: 100%;
+    padding-left: 0px;
+}
+
+li {
+    float: left;
+    height: fit-content;
+    width: fit-content;
+    margin: 10px;
+    background-color:white;
+    border-color: rgb(82, 82, 82);
+    border-style: solid;
+}
+
+li img {
+    width: fit-content;
+}
+
+p {
+    margin: 0px;
+    color: grey;
+    text-align: center;
+    font-size: 100%;
+}
+
+h2 {
+    margin: 0px;
+    color: black;
+    text-align: center;
+    font-size: 200%;
+}
+
+p.description {
+    display: inline-block;
+    color: black;   
 }
