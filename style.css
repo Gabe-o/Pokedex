@@ -1,9 +1,9 @@
 body {
     background-color:rgb(255, 78, 78);
+    color: white;
 }
 
 h1 {
-    color: white;
     font-size: 50px;
     font-family: Courier, monospace;
 }
@@ -14,7 +14,7 @@ ul {
     padding-left: 0px;
 }
 
-li {
+ul li {
     float: left;
     height: fit-content;
     width: fit-content;
@@ -28,14 +28,14 @@ li img {
     width: fit-content;
 }
 
-p {
+ul li p {
     margin: 0px;
     color: grey;
     text-align: center;
     font-size: 100%;
 }
 
-h2 {
+ul li h2 {
     margin: 0px;
     color: black;
     text-align: center;
@@ -50,4 +50,12 @@ p.description {
 input {
     width: 30%;
     margin-right: 10%;
+}
+
+h3 {
+    clear: left;
+}
+
+ol {
+    clear: left;
 }
