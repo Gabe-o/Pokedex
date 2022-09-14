@@ -76,7 +76,19 @@ function searchByName() {
 
     //Input Validation
     if(input.length <= 20  && /^[a-zA-Z]/.test(input)) {
-        alert("Passed");
+
+        //Finds the first 5 results that include the input
+        var resultsString = "Results: \n";
+        var resultsFound = 0;
+        for(var i = 0; i < pokeArr.length && resultsFound < 5; i++) {
+            
+            if(pokeArr[i].name.toLowerCase().includes(input.toLowerCase())) {
+                resultsString += pokeArr[i].toString()+"\n"; // appending found result to the string
+                resultsFound++;
+            }
+        }
+
+        alert(resultsString);
     }
     else {
         alert("Enter no more then 20 characters between A-Z or a-z");
