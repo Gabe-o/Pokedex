@@ -12,18 +12,18 @@
 <body>
     <!-- Place your content here -->
     <h1>Pokédex</h1>
-    <button onclick="searchButton()">Search By ID</button>
-    <input type="text" onkeypress="myFunction(event)" id="idSearch"> 
+    <button onclick="searchByID()">Search By ID</button>
+    <input type="text" onkeypress="searchByIDEnter(event)" id="idSearch"> 
 
-    <button onclick="searchButton()">Search By Name</button>
-    <input type="text" onkeypress="myFunction(event)" id = "nameSearch"> 
+    <button onclick="searchByName()">Search By Name</button>
+    <input type="text" onkeypress="searchByNameEnter(event)" id="nameSearch"> 
 
     <!-- Unordered list of all 20 pokemon -->
     <ul>
         <li>
             <img src="pokemon\1.png">
             <p>#001</p>
-            <h2>Bulbasaur</h5>
+            <h2>Bulbasaur</h2>
         </li>
         <li>
             <img src="pokemon\2.png">
