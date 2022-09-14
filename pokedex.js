@@ -59,7 +59,16 @@ function searchByIDEnter(event) {
 
 //Function for searching pokeArr by Name
 function searchByName() {
-    alert("test");
+    //Gets user input
+    var input = document.getElementById("nameSearch").value;
+
+    //Input Validation
+    if(input.length <= 20  && /^[a-zA-Z]/.test(input)) {
+        alert("Passed");
+    }
+    else {
+        alert("Enter no more then 20 characters between A-Z or a-z");
+    }
 }
 
 //Function to search by ID when Enter key is pressed on the input element
