@@ -12,6 +12,11 @@
 <body>
     <!-- Place your content here -->
     <h1>Pokédex</h1>
+    <button onclick="searchButton()">Search By ID</button>
+    <input type="text" onkeypress="myFunction(event)" id="idSearch"> 
+
+    <button onclick="searchButton()">Search By Name</button>
+    <input type="text" onkeypress="myFunction(event)" id = "nameSearch"> 
 
     <!-- Unordered list of all 20 pokemon -->
     <ul>
@@ -118,6 +123,7 @@
     </ul>
 
     <!-- Embedded JavaScript go here -->
+    <script src = "pokedex.js"></script>
 </body>
 
 </html>

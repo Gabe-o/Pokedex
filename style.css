@@ -46,3 +46,8 @@ p.description {
     display: inline-block;
     color: black;   
 }
+
+input {
+    width: 30%;
+    margin-right: 10%;
+}
