@@ -43,7 +43,19 @@ function searchByID() {
 
     //Input Validation
     if(input > 0 && input <= 20) {
-        alert("Passed");
+
+        //Finds the first 5 results that include the input
+        var resultsString = "Results: \n";
+        var resultsFound = 0;
+        for(var i = 0; i < pokeArr.length && resultsFound < 5; i++) {
+            
+            if(pokeArr[i].id.toString().includes(input)) {
+                resultsString += pokeArr[i].toString()+"\n"; // appending found result to the string
+                resultsFound++;
+            }
+        }
+
+        alert(resultsString);
     }
     else {
         alert("Enter and ID between 1 and 20");
@@ -71,7 +83,7 @@ function searchByName() {
     }
 }
 
-//Function to search by ID when Enter key is pressed on the input element
+//Function to search by name when Enter key is pressed on the input element
 function searchByIDName(event) {
     if (event.key === "Enter" ) {
         searchByID();
