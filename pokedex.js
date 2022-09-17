@@ -96,7 +96,7 @@ function searchByName() {
 }
 
 //Function to search by name when Enter key is pressed on the input element
-function searchByIDName(event) {
+function searchByNameEnter(event) {
     if (event.key === "Enter" ) {
         searchByName();
     }
