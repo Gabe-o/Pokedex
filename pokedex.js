@@ -51,7 +51,7 @@ function searchByID() {
     //Input Validation by parseing string input to integer to account for inputs that include leading zeros
     if(parseInt(input.toString()) > 0 && parseInt(input.toString()) <= 20) {
 
-        searchResultsDiv.style.display = "block";
+        searchResultsDiv.style.display = "block";// Makes search results visable
 
         //Finds the first 5 results that include the input
         var resultsFound = 0;
@@ -63,7 +63,7 @@ function searchByID() {
         }
     }
     else if(input === "") {
-        searchResultsDiv.style.display = "none";
+        searchResultsDiv.style.display = "none"; // Makes search results visable
     }
     else {
         alert("Enter and ID between 1 and 20");
@@ -78,18 +78,21 @@ function searchByName() {
     //Input Validation by checking if the input is less then or equal to 20 characters and only uses the characters a-z or A-Z
     if(input.length <= 20  && /^[a-zA-Z]/.test(input)) {
 
+        searchResultsDiv.style.display = "block";// Makes search results visable
+
         //Finds the first 5 results that include the input
-        var resultsString = "Results: \n";
         var resultsFound = 0;
         for(var i = 0; i < pokeArr.length && resultsFound < 5; i++) {
             
             if(pokeArr[i].name.toLowerCase().includes(input.toLowerCase())) {
-                resultsString += pokeArr[i].toString()+"\n"; // appending found result to the string
-                resultsFound++;
+                
             }
         }
 
         alert(resultsString);
+    }
+    else if(input === "") {
+        searchResultsDiv.style.display = "none";// Makes search results disappear
     }
     else {
         alert("Enter no more then 20 characters between A-Z or a-z");
