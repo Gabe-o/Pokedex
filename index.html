@@ -15,123 +15,191 @@
 
     <!-- Buttons and inputs for search -->
     <button onclick="searchByID()">Search By ID</button>
-    <input type="text" onkeypress="searchByIDEnter(event)" id="idSearch"> 
+    <input type="text" onkeypress="searchByIDEnter(event)" id="idSearch">
 
     <button onclick="searchByName()">Search By Name</button>
-    <input type="text" onkeypress="searchByNameEnter(event)" id="nameSearch"> 
+    <input type="text" onkeypress="searchByNameEnter(event)" id="nameSearch">
+
+    <!-- Div for showing search results -->
+    <div>
+
+    </div>
 
     <!-- Unordered list of all 20 pokemon -->
+    <h3>Unordered List of the first 20 Pokemon</h3>
+
     <ul>
         <li>
-            <img src="pokemon\1.png" alt = "Bulbasaur">
-            <p>#001</p>
-            <h2>Bulbasaur</h2>
+            <img src="pokemon\1.png" alt="Bulbasaur">
+            <div class="pokeInfo">
+                <p>#001</p>
+                <h2>Bulbasaur</h2>
+            </div>
+            <p class="description">Grass / Poison Type from Gen 1 with a Rarity of 4</p>
         </li>
         <li>
-            <img src="pokemon\2.png" alt = "Ivysaur">
-            <p>#002</p>
-            <h2>Ivysaur</h2>
+            <img src="pokemon\2.png" alt="Ivysaur">
+            <div class="pokeInfo">
+                <p>#002</p>
+                <h2>Ivysaur</h2>
+            </div>
+            <p class="description">Grass / Poison Type from Gen 1 with a Rarity of 5</p>
         </li>
         <li>
-            <img src="pokemon\3.png" alt = "Venusaur">
-            <p>#003</p>
-            <h2>Venusaur</h2>
+            <img src="pokemon\3.png" alt="Venusaur">
+            <div class="pokeInfo">
+                <p>#003</p>
+                <h2>Venusaur</h2>
+            </div>
+            <p class="description">Grass / Poison Type from Gen 1 with a Rarity of 6</p>
         </li>
         <li>
-            <img src="pokemon\4.png" alt = "Charmander">
-            <p>#004</p>
-            <h2>Charmander</h2>
+            <img src="pokemon\4.png" alt="Charmander">
+            <div class="pokeInfo">
+                <p>#004</p>
+                <h2>Charmander</h2>
+            </div>
+            <p class="description">Fire Type from Gen 1 with a Rarity of 4</p>
         </li>
         <li>
-            <img src="pokemon\5.png" alt = "Charmeleon">
-            <p>#005</p>
-            <h2>Charmeleon</h2>
+            <img src="pokemon\5.png" alt="Charmeleon">
+            <div class="pokeInfo">
+                <p>#005</p>
+                <h2>Charmeleon</h2>
+            </div>
+            <p class="description">Fire Type from Gen 1 with a Rarity of 5</p>
         </li>
         <li>
-            <img src="pokemon\6.png" alt = "Charizard">
-            <p>#006</p>
-            <h2>Charizard</h2>
+            <img src="pokemon\6.png" alt="Charizard">
+            <div class="pokeInfo">
+                <p>#006</p>
+                <h2>Charizard</h2>
+            </div>
+            <p class="description">Fire / Flying Type from Gen 1 with a Rarity of 6</p>
         </li>
         <li>
-            <img src="pokemon\7.png" alt = "Squirtle">
-            <p>#007</p>
-            <h2>Squirtle</h2>
+            <img src="pokemon\7.png" alt="Squirtle">
+            <div class="pokeInfo">
+                <p>#007</p>
+                <h2>Squirtle</h2>
+            </div>
+            <p class="description">Water Type from Gen 1 with a Rarity of 4</p>
         </li>
         <li>
-            <img src="pokemon\8.png" alt = "Wartortle">
-            <p>#008</p>
-            <h2>Wartortle</h2>
+            <img src="pokemon\8.png" alt="Wartortle">
+            <div class="pokeInfo">
+                <p>#008</p>
+                <h2>Wartortle</h2>
+            </div>
+            <p class="description">Water Type from Gen 1 with a Rarity of 5</p>
         </li>
         <li>
-            <img src="pokemon\9.png" alt = "Blastoise">
-            <p>#009</p>
-            <h2>Blastoise</h2>
+            <img src="pokemon\9.png" alt="Blastoise">
+            <div class="pokeInfo">
+                <p>#009</p>
+                <h2>Blastoise</h2>
+            </div>
+            <p class="description">Water Type from Gen 1 with a Rarity of 6</p>
         </li>
         <li>
-            <img src="pokemon\10.png" alt = "Caterpie">
-            <p>#010</p>
-            <h2>Caterpie</h2>
+            <img src="pokemon\10.png" alt="Caterpie">
+            <div class="pokeInfo">
+                <p>#010</p>
+                <h2>Caterpie</h2>
+            </div>
+            <p class="description">Bug Type from Gen 1 with a Rarity of 1</p>
         </li>
         <li>
-            <img src="pokemon\11.png" alt = "Metapod">
-            <p>#011</p>
-            <h2>Metapod</h2>
+            <img src="pokemon\11.png" alt="Metapod">
+            <div class="pokeInfo">
+                <p>#011</p>
+                <h2>Metapod</h2>
+            </div>
+            <p class="description">Bug Type from Gen 1 with a Rarity of 3</p>
         </li>
         <li>
-            <img src="pokemon\12.png" alt = "Butterfree">
-            <p>#012</p>
-            <h2>Butterfree</h2>
+            <img src="pokemon\12.png" alt="Butterfree">
+            <div class="pokeInfo">
+                <p>#012</p>
+                <h2>Butterfree</h2>
+            </div>
+            <p class="description">Bug / Flying Type from Gen 1 with a Rarity of 4</p>
         </li>
         <li>
-            <img src="pokemon\13.png" alt = "Weedle">
-            <p>#013</p>
-            <h2>Weedle</h2>
+            <img src="pokemon\13.png" alt="Weedle">
+            <div class="pokeInfo">
+                <p>#013</p>
+                <h2>Weedle</h2>
+            </div>
+            <p class="description">Bug / Poison Type from Gen 1 with a Rarity of 1</p>
         </li>
         <li>
-            <img src="pokemon\14.png" alt = "Kakuna">
-            <p>#014</p>
-            <h2>Kakuna</h2>
+            <img src="pokemon\14.png" alt="Kakuna">
+            <div class="pokeInfo">
+                <p>#014</p>
+                <h2>Kakuna</h2>
+            </div>
+            <p class="description">Bug / Poison Type from Gen 1 with a Rarity of 3</p>
         </li>
         <li>
-            <img src="pokemon\15.png" alt = "Beedrill">
-            <p>#015</p>
-            <h2>Beedrill</h2>
+            <img src="pokemon\15.png" alt="Beedrill">
+            <div class="pokeInfo">
+                <p>#015</p>
+                <h2>Beedrill</h2>
+            </div>
+            <p class="description">Bug / Poison Type from Gen 1 with a Rarity of 4</p>
         </li>
         <li>
-            <img src="pokemon\16.png" alt = "Pidgey">
-            <p>#016</p>
-            <h2>Pidgey</h2>
+            <img src="pokemon\16.png" alt="Pidgey">
+            <div class="pokeInfo">
+                <p>#016</p>
+                <h2>Pidgey</h2>
+            </div>
+            <p class="description">Normal / Flying Type from Gen 1 with a Rarity of 1</p>
         </li>
         <li>
-            <img src="pokemon\17.png" alt = "Pidgeotto">
-            <p>#017</p>
-            <h2>Pidgeotto</h2>
+            <img src="pokemon\17.png" alt="Pidgeotto">
+            <div class="pokeInfo">
+                <p>#017</p>
+                <h2>Pidgeotto</h2>
+            </div>
+            <p class="description">Normal / Flying Type from Gen 1 with a Rarity of 3</p>
         </li>
         <li>
-            <img src="pokemon\18.png" alt = "Pidgeot">
-            <p>#018</p>
-            <h2>Pidgeot</h2>
+            <img src="pokemon\18.png" alt="Pidgeot">
+            <div class="pokeInfo">
+                <p>#018</p>
+                <h2>Pidgeot</h2>
+            </div>
+            <p class="description">Normal / Flying Type from Gen 1 with a Rarity of 4</p>
         </li>
         <li>
-            <img src="pokemon\19.png" alt = "Rattata">
-            <p>#019</p>
-            <h2>Rattata</h2>
+            <img src="pokemon\19.png" alt="Rattata">
+            <div class="pokeInfo">
+                <p>#019</p>
+                <h2>Rattata</h2>
+            </div>
+            <p class="description">Normal Type from Gen 1 with a Rarity of 1</p>
         </li>
         <li>
-            <img src="pokemon\20.png" alt = "Raticate">
-            <p>#020</p>
-            <h2>Raticate</h2>
+            <img src="pokemon\20.png" alt="Raticate">
+            <div class="pokeInfo">
+                <p>#020</p>
+                <h2>Raticate</h2>
+            </div>
+            <p class="description">Normal Type from Gen 1 with a Rarity of 4</p>
         </li>
     </ul>
 
     <h3>Refrences</h3>
     <ol>
         <li>Pokemon data set from https://www.kaggle.com/kvpratama/pokemon-images-dataset</li>
-        <li>Pokemon excel from https://www.reddit.com/r/TheSilphRoad/comments/7p952h/pokemon_go_pokedex_spreadsheet/</li>
+        <li>Pokemon excel from https://www.reddit.com/r/TheSilphRoad/comments/7p952h/pokemon_go_pokedex_spreadsheet/
+        </li>
     </ol>
 
     <!-- Embedded JavaScript go here -->
-    <script src = "pokedex.js"></script>
+    <script src="pokedex.js"></script>
 </body>
 
 </html>

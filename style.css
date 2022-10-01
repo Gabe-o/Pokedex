@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color:rgb(255, 78, 78);
     color: white;
@@ -15,36 +19,51 @@ ul {
 }
 
 ul li {
-    float: left;
-    height: fit-content;
-    width: fit-content;
-    margin: 10px;
+    clear: left;
+    display: table;
+    width: 100%;
+    margin-bottom: 10px;
     background-color:white;
     border-color: rgb(82, 82, 82);
     border-style: solid;
 }
 
-li img {
-    width: fit-content;
+img {
+    display: table-cell;
+    width: 50%;
+    margin-left: 20%;
+    padding: 10px;
 }
 
-ul li p {
-    margin: 0px;
+.pokeInfo {
+    display: table-cell;
+    vertical-align: middle;
+    width: 20%;
+    padding: 10px;
+}
+
+div.pokeInfo p {
     color: grey;
-    text-align: center;
-    font-size: 100%;
+    text-align: left;
+    margin: 0px;
+    font-size: 200%;
 }
 
-ul li h2 {
+div.pokeInfo h2 {
     margin: 0px;
     color: black;
-    text-align: center;
+    text-align: left;
     font-size: 200%;
 }
 
 p.description {
-    display: inline-block;
-    color: black;   
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 150%;
+    width: 60%;
+    padding: 10px;
+    margin: 0;
+    color: black;
 }
 
 input {
