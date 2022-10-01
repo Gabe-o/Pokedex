@@ -58,7 +58,9 @@ function searchByID() {
         for(var i = 0; i < pokeArr.length && resultsFound < 5; i++) {
             
             if(pokeArr[i].id.toString().includes(input.toString())) {
-                
+                var ul = searchResultsDiv.lastElementChild;
+                var li = buildPokemonLI(pokeArr[i].id,pokeArr[i].name,pokeArr[i].desc);
+                ul.appendChild(li);
             }
         }
     }
@@ -117,9 +119,9 @@ function buildPokemonLI(id, name, description) {
     div.className = "pokeInfo";
 
     // Building id paragraph and adding it to div
-    var id = document.createElement("p");
-    id.appendChild(document.createTextNode("#"+id));
-    div.appendChild(id);
+    var idP = document.createElement("p");
+    idP.appendChild(document.createTextNode("#"+id));
+    div.appendChild(idP);
 
     // Building name header and adding it to div
     var nameH2 = document.createElement("h2");
