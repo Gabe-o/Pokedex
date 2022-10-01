@@ -62,13 +62,6 @@ function searchByID() {
     }
 }
 
-//Function to search by ID when Enter key is pressed on the input element
-function searchByIDEnter(event) {
-    if (event.key === "Enter" ) {
-        searchByID();
-    }
-}
-
 //Function for searching pokeArr by Name
 function searchByName() {
     //Gets user input
@@ -95,9 +88,42 @@ function searchByName() {
     }
 }
 
-//Function to search by name when Enter key is pressed on the input element
-function searchByNameEnter(event) {
-    if (event.key === "Enter" ) {
-        searchByName();
-    }
+// Returns a built html list item using the info provided
+function buildPokemonLI(id, name, description) {
+    // Buidling li
+    var li = document.createElement("li");
+
+
+    // Building img element and adding it to li 
+    var img = document.createElement("img");
+    img.src = "pokemon/"+parseInt(id)+".png";
+    img.alt = name;
+    li.appendChild(img);
+
+
+    // Building poke info div
+    var div = document.createElement("div");
+    div.className = "pokeInfo";
+
+    // Building id paragraph and adding it to div
+    var id = document.createElement("p");
+    id.appendChild(document.createTextNode("#"+id));
+    div.appendChild(id);
+
+    // Building name header and adding it to div
+    var nameH2 = document.createElement("h2");
+    nameH2.appendChild(document.createTextNode(name));
+    div.appendChild(nameH2);
+
+    // Adding Div to li
+    li.appendChild(div);
+
+
+    // Building description paragraph and adding it to li
+    var descP = document.createElement("p");
+    descP.className = "description";
+    descP.appendChild(document.createTextNode(description));
+    li.appendChild(descP);
+    
+    return li;
 }
