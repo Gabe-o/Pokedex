@@ -14,15 +14,21 @@
     <h1>Pokédex</h1>
 
     <!-- Buttons and inputs for search -->
-    <button onclick="searchByID()">Search By ID</button>
-    <input type="text" onkeypress="searchByIDEnter(event)" id="idSearch">
-
-    <button onclick="searchByName()">Search By Name</button>
-    <input type="text" onkeypress="searchByNameEnter(event)" id="nameSearch">
+    <div class="searchBar">
+        <p>Search By ID:</p>
+        <input type="text" onkeypress="searchByIDEnter(event)" id="idSearch">
+    </div>
+    <div class="searchBar">
+        <p>Search By Name:</p>
+        <input type="text" onkeypress="searchByNameEnter(event)" id="nameSearch">
+    </div>
 
     <!-- Div for showing search results -->
-    <div>
-
+    <div id="searchResults">
+        <h3>Search Results:</h3>
+        <ul>
+            
+        </ul>
     </div>
 
     <!-- Unordered list of all 20 pokemon -->

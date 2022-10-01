@@ -67,8 +67,7 @@ p.description {
 }
 
 input {
-    width: 30%;
-    margin-right: 10%;
+    width: 80%;
 }
 
 h3 {
@@ -77,4 +76,14 @@ h3 {
 
 ol {
     clear: left;
+}
+
+#searchResults {
+    display: none;
+}
+
+.searchBar {
+    float: left;
+    width: 50%;
+    margin-bottom: 10px;
 }
