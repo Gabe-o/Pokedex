@@ -36,6 +36,12 @@ var pokeArr = [
     new Pokemon("020","Raticate","Normal Type from Gen 1 with a Rarity of 4"),
 ];
 
+var searchResultsDiv;
+function getSearchResultDiv() {
+    searchResultsDiv = document.getElementById("searchResults");
+}
+
+
 //Function for searching pokeArr by ID
 function searchByID() {
     //Gets user input
@@ -44,14 +50,13 @@ function searchByID() {
     //Input Validation by parseing string input to integer to account for inputs that include leading zeros
     if(parseInt(input.toString()) > 0 && parseInt(input.toString()) <= 20) {
 
+
         //Finds the first 5 results that include the input
-        var resultsString = "Results: \n";
         var resultsFound = 0;
         for(var i = 0; i < pokeArr.length && resultsFound < 5; i++) {
             
             if(pokeArr[i].id.toString().includes(input.toString())) {
-                resultsString += pokeArr[i].toString()+"\n"; // appending found result to the string
-                resultsFound++;
+                
             }
         }
 
