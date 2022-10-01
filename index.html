@@ -8,23 +8,22 @@
     <meta name="author" content="Gabriel Olivotto">
     <link rel="stylesheet" href="style.css">
 </head>
-
-<body>
+<body onload="getSearchResultsDiv()">
     <!-- Place your content here -->
     <h1>Pokédex</h1>
 
     <!-- Buttons and inputs for search -->
     <div class="searchBar">
         <p>Search By ID:</p>
-        <input type="text" onkeypress="searchByID()" id="idSearch">
+        <input type="text" onkeyup="searchByID()" id="idSearch">
     </div>
     <div class="searchBar">
         <p>Search By Name:</p>
-        <input type="text" onkeypress="searchByName()" id="nameSearch">
+        <input type="text" onkeyup="searchByName()" id="nameSearch">
     </div>
 
     <!-- Div for showing search results -->
-    <div id="searchResults" onload="getSearchResultsDiv()">
+    <div id="searchResults">
         <h3>Search Results:</h3>
         <ul>
             

@@ -37,7 +37,7 @@ var pokeArr = [
 ];
 
 var searchResultsDiv;
-function getSearchResultDiv() {
+function getSearchResultsDiv() {
     searchResultsDiv = document.getElementById("searchResults");
 }
 
@@ -50,7 +50,6 @@ function searchByID() {
     //Input Validation by parseing string input to integer to account for inputs that include leading zeros
     if(parseInt(input.toString()) > 0 && parseInt(input.toString()) <= 20) {
 
-
         //Finds the first 5 results that include the input
         var resultsFound = 0;
         for(var i = 0; i < pokeArr.length && resultsFound < 5; i++) {
@@ -59,8 +58,6 @@ function searchByID() {
                 
             }
         }
-
-        alert(resultsString);
     }
     else {
         alert("Enter and ID between 1 and 20");
