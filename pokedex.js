@@ -50,15 +50,16 @@ function searchByID() {
 
     //Input Validation by parseing string input to integer to account for inputs that include leading zeros
     if(parseInt(input.toString()) > 0 && parseInt(input.toString()) <= 20) {
-
         searchResultsDiv.style.display = "block";// Makes search results visable
+        var ul = searchResultsDiv.lastElementChild;// Getting ul and clearing contents
+        ul.textContent = "";
 
         //Finds the first 5 results that include the input
         var resultsFound = 0;
         for(var i = 0; i < pokeArr.length && resultsFound < 5; i++) {
             
             if(pokeArr[i].id.toString().includes(input.toString())) {
-                var ul = searchResultsDiv.lastElementChild;
+                // Building and appending list item to search results list
                 var li = buildPokemonLI(pokeArr[i].id,pokeArr[i].name,pokeArr[i].desc);
                 ul.appendChild(li);
             }
