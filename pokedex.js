@@ -55,10 +55,8 @@ function searchByID() {
         var ul = searchResultsDiv.lastElementChild;// Getting ul and clearing contents
         ul.textContent = "";
 
-        //Finds the first 5 results that include the input
-        var resultsFound = 0;
-        for(var i = 0; i < pokeArr.length && resultsFound < 5; i++) {
-            
+        //Finds results that include the input
+        for(var i = 0; i < pokeArr.length; i++) {
             if(pokeArr[i].id.toString().includes(input.toString())) {
                 // Building and appending list item to search results list
                 var li = buildPokemonLI(pokeArr[i].id,pokeArr[i].name,pokeArr[i].desc);
@@ -71,7 +69,7 @@ function searchByID() {
     }
     else {
         alert("Enter and ID between 1 and 20");
-        document.getElementById("idSearch").value = ""; // Resets input field
+        document.getElementById("idSearch").value = null; // Resets input field
     }
 }
 
@@ -87,25 +85,21 @@ function searchByName() {
         var ul = searchResultsDiv.lastElementChild;// Getting ul and clearing contents
         ul.textContent = "";
 
-        //Finds the first 5 results that include the input
-        var resultsFound = 0;
-        for(var i = 0; i < pokeArr.length && resultsFound < 5; i++) {
-            
+        //Finds results that include the input
+        for(var i = 0; i < pokeArr.length; i++) {
             if(pokeArr[i].name.toLowerCase().includes(input.toLowerCase())) {
                 // Building and appending list item to search results list
                 var li = buildPokemonLI(pokeArr[i].id,pokeArr[i].name,pokeArr[i].desc);
                 ul.appendChild(li);
             }
         }
-
-        alert(resultsString);
     }
     else if(input === "") {
         searchResultsDiv.style.display = "none";// Makes search results disappear
     }
     else {
         alert("Enter no more then 20 characters between A-Z or a-z");
-        document.getElementById("nameSearch").value = ""; // Resets input field
+        document.getElementById("nameSearch").value = null; // Resets input field
     }
 }
 
