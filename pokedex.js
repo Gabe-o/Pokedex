@@ -37,11 +37,21 @@ var pokeArr = [
 ];
 
 // Gets div for search results
-var searchResultsDiv;
-function getSearchResultsDiv() {
-    searchResultsDiv = document.getElementById("searchResults");
-}
+var searchResultsDiv, searchResultsH3, searchResultsUL;
+function createSearchResultsDiv() {
+    searchResultsDiv = document.createElement("div");
+    searchResultsDiv.attributes.id = "searchResults";
 
+    searchResultsH3 = document.createElement("h3");
+    searchResultsH3.appendChild(document.createTextNode("Search Results:"));
+    searchResultsDiv.appendChild(searchResultsH3);
+    
+    searchResultsUL = document.createElement("ul");
+    searchResultsDiv.appendChild(searchResultsUL);
+
+    document.body.insertBefore(searchResultsDiv, document.body.children[3]);
+    searchResultsDiv.style.display = "none";
+}
 
 //Function for searching pokeArr by ID
 function searchByID() {
@@ -52,15 +62,14 @@ function searchByID() {
     if(parseInt(input.toString()) > 0 && parseInt(input.toString()) <= 20) {
 
         searchResultsDiv.style.display = "block";// Makes search results visable
-        var ul = searchResultsDiv.lastElementChild;// Getting ul and clearing contents
-        ul.textContent = "";
+        searchResultsUL.textContent = "";
 
         //Finds results that include the input
         for(var i = 0; i < pokeArr.length; i++) {
             if(pokeArr[i].id.toString().includes(input.toString())) {
                 // Building and appending list item to search results list
                 var li = buildPokemonLI(pokeArr[i].id,pokeArr[i].name,pokeArr[i].desc);
-                ul.appendChild(li);
+                searchResultsUL.appendChild(li);
             }
         }
     }
@@ -82,15 +91,14 @@ function searchByName() {
     if(input.length <= 20  && /^[a-zA-Z]/.test(input)) {
 
         searchResultsDiv.style.display = "block";// Makes search results visable
-        var ul = searchResultsDiv.lastElementChild;// Getting ul and clearing contents
-        ul.textContent = "";
+        searchResultsUL.textContent = "";
 
         //Finds results that include the input
         for(var i = 0; i < pokeArr.length; i++) {
             if(pokeArr[i].name.toLowerCase().includes(input.toLowerCase())) {
                 // Building and appending list item to search results list
                 var li = buildPokemonLI(pokeArr[i].id,pokeArr[i].name,pokeArr[i].desc);
-                ul.appendChild(li);
+                searchResultsUL.appendChild(li);
             }
         }
     }

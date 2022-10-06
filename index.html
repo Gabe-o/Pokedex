@@ -8,7 +8,7 @@
     <meta name="author" content="Gabriel Olivotto">
     <link rel="stylesheet" href="style.css">
 </head>
-<body onload="getSearchResultsDiv()">
+<body onload="createSearchResultsDiv()">
     <!-- Place your content here -->
     <h1>Pokédex</h1>
 
@@ -20,12 +20,6 @@
     <div class="searchBar">
         <p>Search By Name:</p>
         <input type="text" onkeyup="searchByName()" id="nameSearch">
-    </div>
-
-    <!-- Div for showing search results -->
-    <div id="searchResults">
-        <h3>Search Results:</h3>
-        <ul></ul> 
     </div>
 
     <!-- Unordered list of all 20 pokemon -->
@@ -196,8 +190,7 @@
     <h3>Refrences</h3>
     <ol>
         <li>Pokemon data set from https://www.kaggle.com/kvpratama/pokemon-images-dataset</li>
-        <li>Pokemon excel from https://www.reddit.com/r/TheSilphRoad/comments/7p952h/pokemon_go_pokedex_spreadsheet/
-        </li>
+        <li>Pokemon excel from https://www.reddit.com/r/TheSilphRoad/comments/7p952h/pokemon_go_pokedex_spreadsheet/</li>
     </ol>
 
     <!-- Embedded JavaScript go here -->
