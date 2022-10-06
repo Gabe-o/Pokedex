@@ -40,7 +40,7 @@ var pokeArr = [
 var searchResultsDiv, searchResultsH3, searchResultsUL;
 function createSearchResultsDiv() {
     searchResultsDiv = document.createElement("div");
-    searchResultsDiv.attributes.id = "searchResults";
+    searchResultsDiv.id = "searchResults";
 
     searchResultsH3 = document.createElement("h3");
     searchResultsH3.appendChild(document.createTextNode("Search Results:"));

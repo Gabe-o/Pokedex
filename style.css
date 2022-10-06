@@ -80,6 +80,10 @@ ol {
 
 #searchResults {
     display: none;
+    clear: left;
+    background-color: pink;
+    border-style: groove;
+    padding: 1%;
 }
 
 .searchBar {
