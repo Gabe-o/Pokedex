@@ -63,7 +63,7 @@ function searchByID() {
     if(parseInt(input.toString()) > 0 && parseInt(input.toString()) <= 20) {
 
         searchResultsDiv.style.display = "block";// Makes search results visable
-        searchResultsUL.textContent = "";
+        searchResultsUL.textContent = ""; // clears results
 
         //Finds results that include the input
         for(var i = 0; i < pokeArr.length; i++) {
@@ -75,11 +75,13 @@ function searchByID() {
         }
     }
     else if(input === "") {
-        searchResultsDiv.style.display = "none"; // Makes search results visable
+        searchResultsDiv.style.display = "none"; // Makes search results disappear
     }
     else {
         alert("Enter and ID between 1 and 20");
         document.getElementById("idSearch").value = null; // Resets input field
+        searchResultsDiv.style.display = "none"; // Makes search results disappear
+        searchResultsUL.textContent = ""; // clears results
     }
 }
 
@@ -93,7 +95,7 @@ function searchByName() {
     if(input.length <= 20  && /^[a-zA-Z]/.test(input)) {
 
         searchResultsDiv.style.display = "block";// Makes search results visable
-        searchResultsUL.textContent = "";
+        searchResultsUL.textContent = ""; // clears results
 
         //Finds results that include the input
         for(var i = 0; i < pokeArr.length; i++) {
@@ -110,6 +112,8 @@ function searchByName() {
     else {
         alert("Enter no more then 20 characters between A-Z or a-z");
         document.getElementById("nameSearch").value = null; // Resets input field
+        searchResultsDiv.style.display = "none"; // Makes search results disappear
+        searchResultsUL.textContent = ""; // clears results
     }
 }
 
