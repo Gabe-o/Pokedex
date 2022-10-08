@@ -57,6 +57,7 @@ function createSearchResultsDiv() {
 function searchByID() {
     //Gets user input
     var input = document.getElementById("idSearch").value;
+    document.getElementById("nameSearch").value = null; // Resets name input field
 
     //Input Validation by parseing string input to integer to account for inputs that include leading zeros
     if(parseInt(input.toString()) > 0 && parseInt(input.toString()) <= 20) {
@@ -86,6 +87,7 @@ function searchByID() {
 function searchByName() {
     //Gets user input
     var input = document.getElementById("nameSearch").value;
+    document.getElementById("idSearch").value = null; // Resets id input field
 
     //Input Validation by checking if the input is less then or equal to 20 characters and only uses the characters a-z or A-Z
     if(input.length <= 20  && /^[a-zA-Z]/.test(input)) {
